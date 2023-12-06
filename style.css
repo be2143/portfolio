@@ -1,0 +1,166 @@
+/* Font */
+@font-face {
+    font-family: 'Just Me Again Down Here';
+    src: url('fonts/JustMeAgainDownHere-Regular.ttf') format('truetype');
+    font-weight: normal;
+        font-style: normal;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Styles for the Landing Page section */
+.LandingPage {
+    height: 100vh; /* Full viewport height */
+    /* Other styles for this section */
+    /* Logo Styles */
+    .Logo {
+        position: absolute;
+        color: black;
+        font-size: 100vw; /* Using 12% of the viewport width as the font size */
+        font-family: 'Just Me Again Down Here', sans-serif;
+        font-weight: 400;
+        line-height: 1; /* Reset line height to avoid unnecessary spacing */
+        word-wrap: break-word;
+        left: 60%; /* Position the logo horizontally in the center */
+        top: 35%; /* Position the logo vertically in the center */
+        transform: translate(-50%, -50%); /* Center the logo precisely */
+    }
+
+    /* Name Styles */
+    .Name {
+        left: 57px;
+        top: 60px;
+        position: fixed;
+        color: black;
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        line-height: 25.60px;
+        word-wrap: break-word;
+    }
+
+    /* CSS Styles */
+    .NavigationBar {
+        left: 300px;
+        top: 60px;
+        position: fixed;
+        color: black;
+        font-size: 15px;
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    /* Separate each group of links */
+    .nav-group {
+        margin-bottom: 10px; /* Adjust spacing between groups */
+    }
+
+    /* Adjust styles as needed */
+    .NavigationBar a {
+        margin-right: 20px; /* Adjust spacing between navigation links */
+        text-decoration: none; /* Remove underline from links */
+        color: black; /* Link color */
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Styles for the Introduction section */
+.Introduction {
+    height: 100vh; /* Full viewport height */
+    /* Other styles for this section */
+    
+    .IntroTitle {
+        width: 800px;
+        left: 68%; /* Position horizontally same as the logo */
+        top: 110%; /* Position vertically after the logo */
+        transform: translate(-50%, -50%); /* Center the content */
+        position: absolute;
+    }
+    
+    .HelloEverybody {
+        color: black;
+        font-size: 50px;
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 700;
+        position: absolute;
+    }
+    
+    .MyNameIsBuka {
+        margin-top: 20px;
+        left: 150px;
+        top: 54px;
+        color: black;
+        font-size: 50px;
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 400;
+        position: absolute;
+    }
+    
+    .IAmA {
+        margin-top: 30px;
+        left: 50px;
+        top: 108px;
+        color: black;
+        font-size: 50px;
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 400;
+        position: absolute;
+    }
+    
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Styles for the Projects section */
+.Projects {
+    height: 100vh; /* Full viewport height */
+    /* Other styles for this section */
+    .ProjectTitle {
+        width: 800px;
+        left: 68%; /* Position horizontally same as the logo */
+        top: 210%; 
+        /* Position vertically after the logo */
+        transform: translate(-50%, -50%); /* Center the content */
+        position: absolute;
+    }
+    
+    .ProjectHighlights {
+        color: black;
+        font-size: 50px;
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 700;
+        position: absolute;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Styles for the Email Container section */
+.EmailContainer {
+    height: 100vh; /* Full viewport height */
+    /* Other styles for this section */    
+    .Email {
+        width: 800px;
+        left: 68%; /* Position horizontally same as the logo */
+        top: 310%; 
+        /* Position vertically after the logo */
+        transform: translate(-50%, -50%); /* Center the content */
+        position: absolute;
+    }
+
+    .EmailTitle {
+        padding-top: 10vh;
+        color: black;
+        font-size: 30px;
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 400;
+        position: absolute;
+    }
+
+    .EmailContent {
+        padding-top: 20vh;
+        color: black;
+        font-size: 50px;
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 700;
+        position: absolute;
+    }
+}
