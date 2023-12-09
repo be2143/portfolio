@@ -140,7 +140,7 @@
     .Email {
         width: 800px;
         left: 68%; /* Position horizontally same as the logo */
-        top: 310%; 
+        top: 330%; 
         /* Position vertically after the logo */
         transform: translate(-50%, -50%); /* Center the content */
         position: absolute;
