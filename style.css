@@ -7,10 +7,8 @@
 }
 
 body {
-    background-color: rgb(245, 245, 245, 0.5);
-    /* background-color: rgb(255, 204, 177);  */
-    /* background-color: rgb(178, 205, 225, 0.5);  */
-    /* Other styles for the body */
+    background-color: rgba(226, 222, 220, 1); /* Fallback color if the texture doesn't load */
+    
 }
 
 
@@ -107,7 +105,7 @@ body {
 .IAmA {
     margin-top: 30px;
     left: 50px;
-    top: 108px;
+    top: 120px;
     color: black;
     font-size: 50px;
     font-family: 'PT Serif', sans-serif;
@@ -119,13 +117,12 @@ body {
 /* Styles for the Projects section */
 .Projects {
     height: 100vh; /* Remove fixed height */
-    
 }
 
 .ProjectTitle {
     text-align: center; /* Center the title */
     margin-top: 50px; /* Add spacing between title and grid */
-    margin-bottom: 20px; /* Add spacing between title and grid */
+    margin-bottom: 0; /* Add spacing between title and grid */
     color: black;
     font-size: 50px;
     font-family: 'PT Serif', sans-serif;
@@ -141,7 +138,6 @@ body {
     position: absolute;
     transform: rotate(-90deg); /* Rotate the text */
     transform-origin: left top; /* Set the rotation origin */
-    
     top: 300%; /* Adjust positioning after rotation */
     left: 33%;
 }
@@ -160,7 +156,7 @@ body {
 .project {
     position: relative;
     width: 30vw; /* Adjust width */
-    height: 100%; /* Adjust height */
+    height: 30vw; /* Adjust height */
     background-color: #f0f0f0; /* Example background color */
     border: 1px solid #ccc; /* Example border */
     display: flex;
@@ -186,7 +182,7 @@ body {
 /*------------------------------------------------------------------------------------*/
 /* Styles for the Email Container section */
 .EmailContainer {
-    height: 70vh; /* Full viewport height */
+    height: 60vh; /* Full viewport height */
     /* Other styles for this section */
     position: relative; /* Ensure the container is positioned relative */
     display: flex;
@@ -253,7 +249,7 @@ body {
     height: 500px; /* Adjust the height of the sheet */
     position: relative;
     overflow: hidden;
-    top: 40%;
+    top: 37%;
   }
   
   .line {
@@ -450,4 +446,66 @@ body {
 /* Show the overlay when hovering over the project */
 .project:hover .overlay {
     display: block;
+}
+
+/* Arrow for scrolling indication */
+.arrow-container {
+    position: fixed;
+    bottom: 60px;
+    left: 60px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(135deg); /* Adjust rotation to point the arrow upwards */
+    animation: moveArrow 0.8s infinite alternate;
+  }
+  
+  @keyframes moveArrow {
+    0% {
+      transform: translateY(0) rotate(135deg); /* Adjust the starting position */
+    }
+    100% {
+      transform: translateY(10px) rotate(135deg); /* Adjust the ending position */
+    }
+  }
+  
+  .arrow-container.hidden {
+    opacity: 0;
+    pointer-events: none; /* Optionally disable pointer events */
+}
+
+ /* Copy email text */
+ /* Add the font import at the beginning of your CSS file */
+@font-face {
+    font-family: 'Just Me Again Down Here';
+    src: url('path/to/JustMeAgainDownHere-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+/* Apply the font to the 'CopyText' element */
+.CopyText {
+    height: 100%;
+    width:100%;
+    font-family: 'Just Me Again Down Here', sans-serif;
+    font-size: 22px;
+    color: #333;
+    position: absolute;
+    left: 32vw;
+    top: 8vh;
+}
+
+.ArrowImage {
+    position: absolute;
+    top: 10vh;; /* Adjust the top position as needed */
+    left: 28vw; /* Adjust the left position to align with the text */
+    width: 100px; /* Adjust the width of the arrow image */
+    height: auto; /* Maintain aspect ratio */
+    /* Add any additional styling here */
 }

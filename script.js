@@ -71,16 +71,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Arrow at the landing page
+$(document).ready(function() {
+    $(window).scroll(function() {
+        var contactSectionTop = $('#email').offset().top;
+        var windowBottom = $(window).scrollTop() + $(window).height();
 
-// Copying the email address
+        if (windowBottom > contactSectionTop) {
+            $('.arrow-container').css('opacity', '0'); // Hide arrow container
+        } else {
+            $('.arrow-container').css('opacity', '1'); // Show arrow container
+        }
+    });
+});
+
+// Copy email
 document.addEventListener('DOMContentLoaded', function() {
     const emailContent = document.getElementById('emailContent');
+    const copyText = document.getElementById('copyText');
 
     emailContent.addEventListener('click', function() {
         const email = emailContent.innerText;
         navigator.clipboard.writeText(email)
             .then(() => {
-                alert('Email address copied to clipboard: ' + email);
+                copyText.innerText = 'Copied email!';
+                setTimeout(() => {
+                    copyText.innerText = 'Click to copy email';
+                }, 10000); // Change back to original text after 10 seconds
             })
             .catch(err => {
                 console.error('Failed to copy: ', err);
