@@ -6,6 +6,14 @@
     font-style: normal;
 }
 
+body {
+    background-color: rgb(245, 245, 245, 0.5);
+    /* background-color: rgb(255, 204, 177);  */
+    /* background-color: rgb(178, 205, 225, 0.5);  */
+    /* Other styles for the body */
+}
+
+
 /* Styles for the Landing Page section */
 .LandingPage {
     height: 100vh;
@@ -110,30 +118,75 @@
 /*------------------------------------------------------------------------------------*/
 /* Styles for the Projects section */
 .Projects {
-    height: 100vh; /* Full viewport height */
-    /* Other styles for this section */
-    .ProjectTitle {
-        width: 800px;
-        left: 68%; /* Position horizontally same as the logo */
-        top: 210%; 
-        /* Position vertically after the logo */
-        transform: translate(-50%, -50%); /* Center the content */
-        position: absolute;
-    }
+    height: 100vh; /* Remove fixed height */
     
-    .ProjectHighlights {
-        color: black;
-        font-size: 50px;
-        font-family: 'PT Serif', sans-serif;
-        font-weight: 700;
-        position: absolute;
-    }
+}
+
+.ProjectTitle {
+    text-align: center; /* Center the title */
+    margin-top: 50px; /* Add spacing between title and grid */
+    margin-bottom: 20px; /* Add spacing between title and grid */
+    color: black;
+    font-size: 50px;
+    font-family: 'PT Serif', sans-serif;
+    font-weight: 700;
+    /* Add the following property to move the title to the right */
+}
+
+.ProjectHighlights {
+    color: black;
+    font-size: 70px;
+    font-family: 'PT Serif', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    transform: rotate(-90deg); /* Rotate the text */
+    transform-origin: left top; /* Set the rotation origin */
+    
+    top: 300%; /* Adjust positioning after rotation */
+    left: 33%;
+}
+
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-auto-rows: 1fr 1fr; /* Two rows */
+    grid-gap: 0; /* No gap between grid items */
+    justify-content: space-between; /* Align content with space between */
+    padding-top: 3vw; /* Set top padding */
+    margin-left: 40vw; /* Adjust the left margin */
+}
+
+.project {
+    position: relative;
+    width: 30vw; /* Adjust width */
+    height: 100%; /* Adjust height */
+    background-color: #f0f0f0; /* Example background color */
+    border: 1px solid #ccc; /* Example border */
+    display: flex;
+}
+
+/* Separate columns for rows */
+.project:nth-child(1),
+.project:nth-child(3) {
+    grid-column: 1; /* First column */
+}
+
+.project:nth-child(2),
+.project:nth-child(4) {
+    grid-column: 2; /* Second column */
+    margin-top: -10vh; /* Shift the second row to the left */
+}
+
+.project img {
+    max-width: 100%; /* Adjust image width */
+    max-height: 100%; /* Adjust image height */
 }
 
 /*------------------------------------------------------------------------------------*/
 /* Styles for the Email Container section */
 .EmailContainer {
-    height: 100vh; /* Full viewport height */
+    height: 70vh; /* Full viewport height */
     /* Other styles for this section */
     position: relative; /* Ensure the container is positioned relative */
     display: flex;
@@ -145,7 +198,7 @@
 .Email {
     width: 800px;
     left: 60%;
-    top: 30%;
+    top: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
     display: flex;
@@ -164,7 +217,7 @@
 }
 
 .EmailContent {
-    padding-top: 3vh;
+    padding-top: 1vh;
     color: black;
     font-size: 50px;
     font-family: 'PT Serif', sans-serif;
@@ -174,11 +227,11 @@
 
 /* Styles for the Contact Icons */
 .ContactIcons {
-    padding-top: 10vh;
+    padding-top: 30vh;
     display: flex;
     justify-content: left;
     align-items: left;
-    margin-top: 50px; /* Add margin to separate from email content */
+    margin-top: 80px; /* Add margin to separate from email content */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -304,18 +357,13 @@
     z-index: 0; /* Ensure it's below the text */
     background-color: rgba(217, 217, 217, 0); /* Set transparent initially */
     pointer-events: none; /* Allow hover events to pass through to the content */
-    transition: background-color 0.3s ease; /* Add a transition for a smooth effect */
+    transition: background-color 3.5s ease-in-out; /* Add a transition for a smooth effect */
 }
 
-.Column1:hover::before,
-.Column2:hover::before {
-    background-color: rgba(217, 217, 217, 0.3); /* Adjust the transparency (0.3 for 30% opacity) */
-}
-
-/* Hide the images initially */
-.image-1 img,
-.image-2 img {
-    display: none;
+/* Initially, show the image in the first column and hide the image in the second column */
+.image-1 img {
+    opacity: 1; /* Initially set opacity to 1 for the first column image */
+    transition: opacity 0.5s ease-in-out; /* Add a transition for opacity */
     position: absolute;
     top: 0;
     left: 0;
@@ -325,25 +373,81 @@
     z-index: 0; /* Ensure the images are above the background */
 }
 
-/* Show images on hover */
+.image-2 img {
+    opacity: 0; /* Initially set opacity to 0 for the second column image */
+    transition: opacity 0.5s ease-in-out; /* Add a transition for opacity */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    z-index: 0; /* Ensure the images are above the background */
+}
+
+/* Change opacity when hovering over columns */
 .Column1:hover .image-1 img,
 .Column2:hover .image-2 img {
-    display: block;
+    opacity: 1; /* Show the respective column image on hover */
 }
+
+/* Change opacity when hovering over columns */
+.Column1:hover .image-1 img {
+    opacity: 0; /* Hide the first column image on hover */
+}
+
+.Column2:hover .image-2 img {
+    opacity: 1; /* Show the second column image on hover */
+}
+
 
 /*------------------------------------------------------------------------------------*/
 /* Change background color in the projects sections */
 .projects-background {
-    background-color: #222327; /* Change this to your desired background color */
-    transition: background-color 1.5s ease; /* Add a transition effect */
+    background-color: rgb(242, 191, 191); /* Change this to your desired background color */
+    transition: background-color 1.5s ease-in-out; /* Add a transition effect */
 }
 
-.highlight-color {
-    color: rgb(249,205,245); /* Change this to your desired text color */
-    /* Additional styles for the elements whose color you want to change */
+
+body {
+    /* Other styles for body */
+    transition: background-color 1.5s ease-in-out; /* Add transition for smooth color change */
 }
 
-/* Define the styles for changed name text and navigation text */
-.name-color, .nav-color  {
-    color: rgb(249,205,245);
+
+/*------------------------------------------------------------------------------------*/
+/* Style for the project open effects */
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.5);
+    display: none;
+    pointer-events: none;
+    z-index: 998; /* Ensure it's above other elements */
+}
+.circle-text {
+    position: absolute;
+    font-size: 12px;
+    color: black;
+    display: none; /* Initially hidden */
+    z-index: 999; /* Ensure it's above other elements */
+    pointer-events: none; /* Avoid interfering with mouse events */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.3); /* Transparent white */
+    display: none; /* Initially hidden */
+    pointer-events: none; /* Allows mouse events to go through to the project content */
+}
+
+/* Show the overlay when hovering over the project */
+.project:hover .overlay {
+    display: block;
 }
