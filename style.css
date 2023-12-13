@@ -433,19 +433,31 @@ body {
 }
 
 .overlay {
+    /* Other overlay styles */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(128, 128, 128, 0.3); /* Transparent white */
-    display: none; /* Initially hidden */
-    pointer-events: none; /* Allows mouse events to go through to the project content */
+    /* background-color: rgba(128, 128, 128, 0.8); */
+    background-color: rgba(178, 205, 225, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Show the overlay when hovering over the project */
 .project:hover .overlay {
-    display: block;
+    opacity: 1;
+    
+}
+
+.project-info {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    /* Additional styles for the project info */
 }
 
 /* Arrow for scrolling indication */
