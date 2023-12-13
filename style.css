@@ -8,9 +8,10 @@
 
 body {
     background-color: rgba(226, 222, 220, 1); /* Fallback color if the texture doesn't load */
-    
+    /* Limiting the maximum width to the screen size */
+    max-width: 100vw;
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
-
 
 /* Styles for the Landing Page section */
 .LandingPage {
@@ -71,6 +72,8 @@ body {
 /*------------------------------------------------------------------------------------*/
 /* Styles for the Introduction section */
 .Introduction {
+    width: 100vw; /* Adjust as needed */
+    overflow-x: hidden; /* Hide any overflow */
     height: 100vh;
     /* Other styles for this section */
 }
@@ -117,6 +120,7 @@ body {
 /* Styles for the Projects section */
 .Projects {
     height: 100vh; /* Remove fixed height */
+    
 }
 
 .ProjectTitle {
@@ -182,6 +186,8 @@ body {
 /*------------------------------------------------------------------------------------*/
 /* Styles for the Email Container section */
 .EmailContainer {
+    width: 100vw; /* Adjust as needed */
+    overflow-x: hidden; /* Hide any overflow */
     height: 60vh; /* Full viewport height */
     /* Other styles for this section */
     position: relative; /* Ensure the container is positioned relative */
@@ -520,3 +526,5 @@ body {
     width: 100px; /* Adjust the width of the arrow image */
     height: auto; /* Maintain aspect ratio */
 }
+
+
