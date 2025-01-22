@@ -85,23 +85,3 @@ $(document).ready(function() {
     });
 });
 
-// Copy email
-document.addEventListener('DOMContentLoaded', function() {
-    const emailContent = document.getElementById('emailContent');
-    const copyText = document.getElementById('copyText');
-
-    emailContent.addEventListener('click', function() {
-        const email = emailContent.innerText;
-        navigator.clipboard.writeText(email)
-            .then(() => {
-                copyText.innerText = 'Copied email!';
-                setTimeout(() => {
-                    copyText.innerText = 'Click to copy email';
-                }, 10000); // Change back to original text after 10 seconds
-            })
-            .catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-    });
-});
-
