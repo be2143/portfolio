@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buka-Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Buka Enkhjargal - A curious programmer, design enthusiast, and lifelong learner actively seeking opportunities in computer science and interactive media.">
+    <meta name="author" content="Buka Enkhjargal">
+    <title>Buka Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="script.js"></script>
+</head>
 
 <body>
     <!-- Landing Page Section -->
-    <section class="LandingPage">
-        <div class="Logo">.b</div>
-        <div class="Name" id="top">BUKA ENKHJARGAL</div>
+    <header class="LandingPage" role="banner">
+        <div class="Logo" aria-label="Logo">.b</div>
+        <h1 class="Name" id="top">BUKA ENKHJARGAL</h1>
         <!-- NavigationBar Section -->
         <div class="NavigationBar">
             <div class="nav-group">
@@ -23,113 +27,95 @@
                 <a href="#projects">PROJECT HIGHLIGHTS</a>
             </div>
             <div class="nav-group">
-                <a href="#email">CONTACT</a>
+                <a href="#contact">CONTACT</a>
             </div>
         </div>
-        <div class="arrow-container">
-            <div class="arrow"></div>
-        </div>
-    </section>
+    </header>
 
-    <!-- Introduction Section -->
-    <section id="introduction" class="Introduction">
-        <div class="IntroTitle">
-            <div class="HelloEverybody">HELLO EVERYBODY!<br/></div>
-            <div class="MyNameIsBuka">MY NAME IS BUKA,</div>
-            <div class="IAmA">I AM ...</div>
-        </div>
-        <!-- Frame of the Introduction -->
-        <div class="sheet">
-            <div class="line horizontal top"></div>
-            <div class="line horizontal bottom"></div>
-            <div class="line vertical"></div>
-            <div class="IntroBody">
-                <div class="Column1">
-                    <div class="Title1">A STUDENT</div>
-                    <div class="Body1">COMPUTER SCIENCE & INTERACTIVE MEDIA<br/>NYU ABU DHABI, CO 2026</div>
-                    <div class="image-1">
-                        <img src="images/student.png" alt="Student at NYU Abu Dhabi" id="Column1-Image">
-                    </div>
-                </div>
-                <div class="Column2">
-                    <div class="Title2">INTERESTED IN</div>
-                    <div class="Body2">UI / UX DESIGN<br/>WEB DESIGN / WEB DEVELOPMENT<br/>FULL-STACK DEVELOPMENT</div>
-                    <div class="image-2">
-                        <img src="images/designer.png" alt="Designer / Developer" id="Column2-Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction" class="Introduction">
+            <p>Hi, I’m Buka! I’m a Computer Science and Interactive Media Student at New York University Abu Dhabi.</p>
+            <p></p>
+            <p>My mission? Keep things fresh and fun! Whether I'm coding up a storm or dreaming up the next big thing, I'm all about bringing a bit of flair and creativity to everything I do.</p>
+            
+        </section>
 
-    <!-- Project Highlights Section -->
-    <section id="projects" class="Projects">
-        <div class="ProjectTitle">
-            <div class="ProjectHighlights">2023 FALL - PROJECTS<br/></div>
-            <div class="project-grid">
-                <div class="project">
-                    <a href="https://github.com/buka-e/buka-e.github.io/tree/main/FreshPack" target="_blank">
-                        <img src="images/1.png" alt="Fresh Pack" id="Project1-Image">
-                        <div class="overlay">
-                            <div class="project-info">
-                                <h3>30MFF WEBSITE</h3>
-                                <p>Individual Project</p>
-                            </div>
-                        </div> 
+        <!-- Project Highlights Section -->
+        <section id="projects" class="Projects" aria-labelledby="projects-title">
+            <h1 id="projects-title">PROJECT HIGHLIGHTS</h1>
+            <div class="project-list">
+                <article class="project">
+                    <a href="https://github.com/be2143/soniccircle" target="_blank"
+                        aria-label="sonic">
+                        <img src="images/sonic.png" alt="Screenshot of sonic" id="Fall24-Project1-Image">
                     </a>
-                </div>
-                <div class="project">
-                    <a href="https://github.com/qm-naushad/finorfatecomic" target="_blank">
-                        <img src="images/2.png" alt="Comics Project" id="Project2-Image">
-                        <div class="overlay">
-                            <div class="project-info">
-                                <h3>INTERACTIVE COMIC</h3>
-                                <p>Group Project</p>
-                            </div>
-                        </div> 
+                </article>
+                <article class="project">
+                    <a href="https://github.com/qm-naushad/finorfatecomic" target="_blank" aria-label="Comics Project">
+                        <img src="images/2.png" alt="Screenshot of Comics Project" id="Fall23-Project2-Image">
                     </a>
-                </div>
-                <div class="project">
-                    <a href="https://github.com/fangfausto/sound-project-podcast" target="_blank">
-                        <img src="images/3.png" alt="Sound Project" id="Project3-Image">
-                        <div class="overlay">
-                            <div class="project-info">
-                                <h3>SOUND PROJECT</h3>
-                                <p>Group Project</p>
-                            </div>
-                        </div> 
+                </article>
+                <article class="project">
+                    <a href="files/SAM.pdf" target="_blank" aria-label="SAM">
+                        <img src="images/sam.png" alt="Screenshot of SAM" id="Winter23-Project1-Image">
                     </a>
-                </div>
-                <div class="project">
-                    <a href="https://fhgggtyf.github.io/HOW-Video/index.html" target="_blank">
-                        <img src="images/4.png" alt="Video Project" id="Project4-Image">
-                        <div class="overlay">
-                            <div class="project-info">
-                                <h3>VIDEO PROJECT</h3>
-                                <p>Group Project</p>
-                            </div>
-                        </div> 
+                </article>
+                <article class="project">
+                    <a href="https://github.com/fangfausto/sound-project-podcast" target="_blank"
+                        aria-label="Sound Project">
+                        <img src="images/3.png" alt="Screenshot of Sound Project" id="Fall23-Project3-Image">
                     </a>
-                </div>
+                </article>
+                <article class="project">
+                    <a href="https://fhgggtyf.github.io/HOW-Video/index.html" target="_blank"
+                        aria-label="Video Project">
+                        <img src="images/4.png" alt="Screenshot of Video Project" id="Fall23-Project4-Image">
+                    </a>
+                </article>
+                <article class="project">
+                    <a href="https://github.com/buka-e/buka-e.github.io/tree/main/FreshPack" target="_blank"
+                        aria-label="Fresh Pack">
+                        <img src="images/1.png" alt="Screenshot of Fresh Pack project" id="Project1-Image">
+                    </a>
+                </article>                
+                <article class="project">
+                    <a href="https://github.com/be2143/Fireboy-and-Watergirl" target="_blank"
+                        aria-label="Game">
+                        <img src="images/game.png" alt="Screenshot of game" id="Spring23-Project1-Image">
+                    </a>
+                </article>
             </div>
-            <div class="circle"></div>
-            <div class="circle-text">OPEN</div>
-        </div>
-    </section>
-    <!-- Email Container Section -->
-    <section id="email" class="EmailContainer">
-        <div class="Email">
-            <div class="EmailTitle">EMAIL</div>
-            <a href="mailto:be2143@nyu.edu" class="EmailContent" id="emailContent">BE2143@NYU.EDU</a>
-            <div class="MessageText" id="messageText">Let's connect</div>
-            <img src="images/arrow.png" alt="Arrow" class="ArrowImage">
-        </div>        
-        <!-- Contact icons -->
-        <div class="ContactIcons">
-            <a href="https://www.linkedin.com/in/buyankhishig-e/" target="_blank"><img src="images/linkedin.png" alt="Contact 1"></a>
-            <a href="https://github.com/buka-e" target="_blank"><img src="images/github.png" alt="Contact 2"></a>
-            <a href="https://instagram.com/buka3018/" target="_blank"><img src="images/instagram.png" alt="Contact 3"></a>
-        </div>
-    </section>
+        </section>
+
+        <!-- Creative Coding Section -->
+        <section id="creativity" class="Creativity" aria-labelledby="creativity-title">
+        <h1 id="creativity-title">Creative Coding with p5.js</h1>
+            <iframe src="https://editor.p5js.org/be2143/full/wxUp4YLBf" width="700" height="745"></iframe>
+            <iframe src="https://editor.p5js.org/be2143/full/-F-EQhVzD" width="400" height="445"></iframe>
+            <iframe src="https://editor.p5js.org/be2143/full/G8wv6ZLNY" width="400" height="445"></iframe>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="Contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Let's Connect</h2>
+            <div class="Email">
+                <a href="mailto:be2143@nyu.edu" class="EmailContent" id="emailContent">BE2143@NYU.EDU</a>
+            </div>
+            <!-- Contact icons -->
+            <div class="ContactIcons" aria-label="Social Media Links">
+                <a href="https://www.linkedin.com/in/buyankhishig-e/" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn logo">
+                </a>
+                <a href="https://github.com/buka-e" target="_blank" aria-label="GitHub">
+                    <img src="images/github.png" alt="GitHub logo">
+                </a>
+                <a href="https://instagram.com/buka3018/" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.png" alt="Instagram logo">
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

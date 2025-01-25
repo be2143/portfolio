@@ -10,4 +10,4 @@ Following this is the most crucial page, the project highlights. It showcases fo
 
 The final part is the contact page, providing links to my email, LinkedIn, GitHub, and Instagram. Notably, there's a cute arrow and accompanying text that says "click to copy email." When the email is successfully copied, the text changes to "copied email!" This interaction, though small, adds an element of fun.
 
-Overall, I'm very satisfied with my portfolio. For future improvements, I aim to include more of my personal projects to enrich its content. I intentionally pursued a simplistic and minimal design, which I believe I've successfully achieved.
+Overall, I'm very satisfied with my portfolio. For future improvements, I aim to include more of my personal projects to enrich its content. Also, there needs to be a skills section to display different skills I acquire. I intentionally pursued a simplistic and minimal design, which I believe I've successfully achieved.

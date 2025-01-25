@@ -1,4 +1,4 @@
-/* Font */
+/* Font Styles */
 @font-face {
     font-family: 'Just Me Again Down Here';
     src: url('fonts/JustMeAgainDownHere-Regular.ttf') format('truetype');
@@ -6,16 +6,34 @@
     font-style: normal;
 }
 
-body {
-    background-color: rgba(226, 222, 220, 1);
-    /* Fallback color if the texture doesn't load */
-    /* Limiting the maximum width to the screen size */
-    max-width: 100vw;
-    overflow-x: hidden;
-    /* Hide horizontal overflow */
+/* General Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styles for the Landing Page section */
+body {
+    font-family: 'PT Serif', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin-bottom: 15px; 
+}
+
+h1 {
+    margin-bottom: 30px; 
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Landing Page Section */
 .LandingPage {
     height: 100vh;
 }
@@ -24,24 +42,18 @@ body {
     position: absolute;
     color: #000000;
     font-size: 100vw;
-    /* Using 12% of the viewport width as the font size */
     font-family: 'Just Me Again Down Here', sans-serif;
     font-weight: 400;
     line-height: 1;
-    /* Reset line height to avoid unnecessary spacing */
     word-wrap: break-word;
     left: 60%;
-    /* Position the logo horizontally in the center */
     top: 35%;
-    /* Position the logo vertically in the center */
     transform: translate(-50%, -50%);
-    /* Center the logo precisely */
 }
 
 .Name {
     z-index: 999;
-    /* Set a high z-index value */
-    left: 57px;
+    left: 50px;
     top: 60px;
     position: fixed;
     color: black;
@@ -51,12 +63,10 @@ body {
     line-height: 25.60px;
     word-wrap: break-word;
     cursor: pointer;
-    /* Ensure the cursor changes on hover */
 }
 
 .NavigationBar {
     z-index: 999;
-    /* Set a high z-index value */
     left: 250px;
     top: 60px;
     position: fixed;
@@ -70,691 +80,190 @@ body {
 /* Separate each group of links */
 .nav-group {
     margin-bottom: 10px;
-    /* Adjust spacing between groups */
 }
 
-/* Adjust styles as needed */
 .NavigationBar a {
-    margin-right: 20px;
-    /* Adjust spacing between navigation links */
-    text-decoration: none;
-    /* Remove underline from links */
-    color: black;
-    /* Link color */
+    margin-right: 20px; 
+    text-decoration: none; 
+    color: grey; 
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; 
 }
 
 .NavigationBar a:hover {
-    font-weight: bold;
+    transform: scale(1.3);
+    color: black; 
+    text-decoration: underline;
 }
 
 /*------------------------------------------------------------------------------------*/
-/* Styles for the Introduction section */
-.Introduction {
-    width: 100vw;
-    /* Adjust as needed */
-    overflow-x: hidden;
-    /* Hide any overflow */
-    height: 100vh;
-    /* Other styles for this section */
-}
-
-.IntroTitle {
-    width: 800px;
-    left: 68%;
-    /* Position horizontally same as the logo */
-    top: 110%;
-    /* Position vertically after the logo */
-    transform: translate(-50%, -50%);
-    /* Center the content */
-    position: absolute;
-}
-
-.HelloEverybody {
+/* Introduction Section */
+#introduction {
+    display: flex; 
+    flex-direction: column; 
     color: black;
-    font-size: 50px;
+    font-size: 25px;
     font-family: 'PT Serif', sans-serif;
-    font-weight: 700;
-    position: fixed;
+    justify-content: center; 
+    align-items: flex-start; 
+    height: calc(100vh - 50px); /* Adjust height to account for the navbar */
+    text-align: left;
+    padding-left: 30vw; /* Adjust left padding as necessary */
+    padding-right: 30vw; /* Adjust left padding as necessary */
 }
 
-.MyNameIsBuka {
-    margin-top: 20px;
-    left: 150px;
-    top: 54px;
-    color: black;
-    font-size: 50px;
-    font-family: 'PT Serif', sans-serif;
-    font-weight: 400;
-    position: absolute;
-}
-
-.IAmA {
-    margin-top: 30px;
-    left: 50px;
-    top: 120px;
-    color: black;
-    font-size: 50px;
-    font-family: 'PT Serif', sans-serif;
-    font-weight: 400;
-    position: absolute;
-}
 
 /*------------------------------------------------------------------------------------*/
-/* Styles for the Projects section */
+/* Projects Section */
 .Projects {
-    height: 100vh;
-    /* Remove fixed height */
-}
-
-.ProjectTitle {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
     text-align: center;
-    /* Center the title */
-    margin-top: 50px;
-    /* Add spacing between title and grid */
-    margin-bottom: 0;
-    /* Add spacing between title and grid */
-    color: black;
-    font-size: 50px;
-    font-family: 'PT Serif', sans-serif;
-    font-weight: 700;
 }
 
-.ProjectHighlights {
-    color: black;
-    font-size: 70px;
-    font-family: 'PT Serif', sans-serif;
-    font-weight: 700;
-    position: absolute;
-    transform: rotate(-90deg);
-    /* Rotate the text */
-    transform-origin: left top;
-    /* Set the rotation origin */
-    top: 300%;
-    /* Adjust positioning after rotation */
-    left: 33%;
-}
-
-/* Default grid styling */
-.project-grid {
+/* Style the grid container */
+.project-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Two columns by default */
-    grid-auto-rows: 1fr 1fr;
-    /* Two rows */
-    grid-gap: 0;
-    /* No gap between grid items */
-    justify-content: space-between;
-    /* Align content with space between */
-    padding-top: 3vw;
-    /* Set top padding */
-    margin-left: 40vw;
-    /* Adjust the left margin */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax values as needed */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    max-width: 1200px; /* Optional: To control the total width of the grid */
+    margin: 0 auto; /* Center the grid */
 }
 
+
+/* Style individual project cards */
 .project {
-    position: relative;
-    width: 30vw;
-    /* Adjust width */
-    height: 30vw;
-    /* Adjust height */
-    background-color: #f0f0f0;
-    /* Example background color */
-    border: 1px solid #ccc;
-    /* Example border */
-    display: flex;
+    background-color: transparent; /* No background */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent content overflow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 300px;
 }
 
-/* Separate columns for rows */
-.project:nth-child(1),
-.project:nth-child(3) {
-    grid-column: 1;
-    /* First column */
-}
-
-.project:nth-child(2),
-.project:nth-child(4) {
-    grid-column: 2;
-    /* Second column */
-    margin-top: -10vh;
-    /* Shift the second row to the left */
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project img {
-    max-width: 100%;
-    /* Adjust image width */
-    max-height: 100%;
-    /* Adjust image height */
+    width: 100%; /* Ensure image fills the container */
+    height: auto;
+    display: block; /* Remove gaps below images caused by inline-block behavior */
+    border-radius: 10px;
 }
 
-/*------------------------------------------------------------------------------------*/
-/* Styles for the Email Container section */
-.EmailContainer {
-    width: 100vw;
-    /* Adjust as needed */
-    overflow-x: hidden;
-    /* Hide any overflow */
-    height: 60vh;
-    /* Full viewport height */
-    /* Other styles for this section */
-    position: absolute;
-    /* Ensure the container is positioned relative */
-    display: flex;
-    flex-direction: column;
-    /* Stack elements vertically */
+/* Creativity section styling */
+section.Creativity {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 90%;
+  }
+  
+  /* iFrame container styling for responsiveness */
+  section.Creativity iframe {
+    border: none;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive grid for iframes */
+  section.Creativity {
+    gap: 1.5rem;
     align-items: center;
-    /* Center content horizontally */
-    justify-content: center;
-    /* Center content vertically */
+    justify-items: center;
+  }
+/*------------------------------------------------------------------------------------*/
+/* Contact Section */
+.Contact {
+    padding: 80px 20px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    text-align: center;
 }
 
 .Email {
-    width: 800px;
-    left: 60%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    /* Center content horizontally */
-    text-align: left;
-    /* Center text within */
+    margin-bottom: 30px;
 }
 
 .EmailTitle {
-    padding-top: 10vh;
-    color: black;
-    font-size: 30px;
-    font-family: 'PT Serif', sans-serif;
-    font-weight: 400;
-    /* Remove absolute positioning */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
 }
 
 .EmailContent {
-    padding-top: 1vh;
-    color: black;
-    font-size: 50px;
-    font-family: 'PT Serif', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    /* Remove absolute positioning */
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
 }
 
 .EmailContent:hover {
     text-decoration: underline;
 }
 
-/* Styles for the Contact Icons */
+.MessageText {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
 .ContactIcons {
-    padding-top: 30vh;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    margin-top: 80px;
-    /* Add margin to separate from email content */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.ContactIcons a {
-    margin: 0 15px;
-    /* Add spacing between icons */
-}
-
-.ContactIcons img {
-    width: 50px;
-    /* Initial size of the icons */
-    height: auto;
-    /* Keep the aspect ratio intact */
-    transition: width 0.3s ease-in-out;
-    /* Smooth transition on hover */
-}
-
-.ContactIcons img:hover {
-    transform: scale(1.1);
-}
-
-/*------------------------------------------------------------------------------------*/
-/* Styles for the Sheets section */
-.sheet {
-    width: 100vw;
-    /* Adjust the width of the sheet */
-    height: 500px;
-    /* Adjust the height of the sheet */
-    position: relative;
-    overflow: hidden;
-    top: 37%;
-}
-
-.line {
-    position: absolute;
-    background-color: #000;
-    /* Color of the lines */
-    z-index: 999;
-    /* Set a high z-index value */
-}
-
-.horizontal {
-    width: 100%;
-    height: 1px;
-    /* Thickness of horizontal lines */
-}
-
-.top {
-    top: 0%;
-}
-
-.bottom {
-    bottom: 0%;
-}
-
-.vertical {
-    height: 100%;
-    width: 1px;
-    /* Thickness of vertical line */
-    left: 50%;
-    /* Position the vertical line in the middle horizontally */
-}
-
-/*------------------------------------------------------------------------------------*/
-/* Styles for the Introcution Body Part */
-.IntroBody {
-    display: flex;
-    width: 100%;
-}
-
-.Column1,
-.Column2 {
-    width: 50%;
-    padding: 20px;
-    /* Add padding as needed */
-    box-sizing: border-box;
-    /* Include padding in the width calculation */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    /* Align content to the bottom */
-    position: relative;
-    /* Change position to relative */
-}
-
-/* Styles for columns within IntroBody */
-.Column1 {
-    left: 0;
-    /* Position it at the left side */
-    width: 50%;
-    /* Occupy the first half */
-    z-index: 2;
-    /* Ensure it's above the sheet */
-    position: absolute;
-    top: 0%;
-    height: 500px;
-    padding: 20px;
-    /* background-color: aqua; */
-}
-
-.Column2 {
-    left: 50%;
-    /* Position it at the left side */
-    width: 50%;
-    /* Occupy the second half */
-    z-index: 2;
-    /* Ensure it's above the sheet */
-    position: absolute;
-    top: 0%;
-    height: 500px;
-    padding: 20px;
-    /* background-color: fuchsia; */
-}
-
-/* Styles for the content inside columns */
-.Title1,
-.Title2 {
-    font-family: 'PT Serif', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: black;
-    margin-bottom: 10px;
-    position: relative;
-    /* Set position to relative */
-    z-index: 2;
-    /* Ensure the text is above the background */
-}
-
-.Body1,
-.Body2 {
-    font-family: 'PT Serif', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: black;
-    line-height: 1.5;
-    position: relative;
-    /* Set position to relative */
-    z-index: 2;
-    /* Ensure the text is above the background */
-}
-
-/* Add hover effect on columns */
-.Column1::before,
-.Column2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    /* Ensure it's below the text */
-    background-color: rgba(217, 217, 217, 0);
-    /* Set transparent initially */
-    pointer-events: none;
-    /* Allow hover events to pass through to the content */
-    transition: background-color 3.5s ease-in-out;
-    /* Add a transition for a smooth effect */
-}
-
-/* Initially, show the image in the first column and hide the image in the second column */
-.image-1 img {
-    opacity: 1;
-    /* Initially set opacity to 1 for the first column image */
-    transition: opacity 0.5s ease-in-out;
-    /* Add a transition for opacity */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Adjust as needed */
-    height: 100%;
-    /* Adjust as needed */
-    object-fit: cover;
-    /* Maintain aspect ratio and cover the container */
-    z-index: 0;
-    /* Ensure the images are above the background */
-}
-
-.image-2 img {
-    opacity: 0;
-    /* Initially set opacity to 0 for the second column image */
-    transition: opacity 0.5s ease-in-out;
-    /* Add a transition for opacity */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Adjust as needed */
-    height: 100%;
-    /* Adjust as needed */
-    object-fit: cover;
-    /* Maintain aspect ratio and cover the container */
-    z-index: 0;
-    /* Ensure the images are above the background */
-}
-
-/* Change opacity when hovering over columns */
-.Column1:hover .image-1 img,
-.Column2:hover .image-2 img {
-    opacity: 1;
-    /* Show the respective column image on hover */
-}
-
-/* Change opacity when hovering over columns */
-.Column1:hover .image-1 img {
-    opacity: 0;
-    /* Hide the first column image on hover */
-}
-
-.Column2:hover .image-2 img {
-    opacity: 1;
-    /* Show the second column image on hover */
-}
-
-/*------------------------------------------------------------------------------------*/
-/* Change background color in the projects sections */
-.projects-background {
-    background-color: rgb(242, 191, 191);
-    /* Change this to your desired background color */
-    transition: background-color 1.5s ease-in-out;
-    /* Add a transition effect */
-}
-
-
-body {
-    /* Other styles for body */
-    transition: background-color 1.5s ease-in-out;
-    /* Add transition for smooth color change */
-}
-
-
-/*------------------------------------------------------------------------------------*/
-/* Style for the project open effects */
-.circle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(128, 128, 128, 0.5);
-    display: none;
-    pointer-events: none;
-    z-index: 998;
-    /* Ensure it's above other elements */
-}
-
-.circle-text {
-    position: absolute;
-    font-size: 12px;
-    color: black;
-    display: none;
-    /* Initially hidden */
-    z-index: 999;
-    /* Ensure it's above other elements */
-    pointer-events: none;
-    /* Avoid interfering with mouse events */
-}
-
-.overlay {
-    /* Other overlay styles */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: rgba(128, 128, 128, 0.8); */
-    background-color: rgba(178, 205, 225, 0.8);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 25px;
 }
 
-.project:hover .overlay {
-    opacity: 1;
-
+.ContactIcons a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.project-info {
-    font-size: 20px;
-    text-align: center;
-    color: black;
-    /* Additional styles for the project info */
-}
-
-/* Arrow for scrolling indication */
-.arrow-container {
-    position: fixed;
-    bottom: 60px;
-    left: 60px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.arrow {
-    width: 30px;
-    height: 30px;
-    border: 2px solid #000;
-    border-left: none;
-    border-bottom: none;
-    transform: rotate(135deg);
-    /* Adjust rotation to point the arrow upwards */
-    animation: moveArrow 0.8s infinite alternate;
-}
-
-@keyframes moveArrow {
-    0% {
-        transform: translateY(0) rotate(135deg);
-        /* Adjust the starting position */
-    }
-
-    100% {
-        transform: translateY(10px) rotate(135deg);
-        /* Adjust the ending position */
-    }
-}
-
-.arrow-container.hidden {
-    opacity: 0;
-    pointer-events: none;
-    /* Optionally disable pointer events */
-}
-
-/* Copy email text */
-/* Add the font import at the beginning of your CSS file */
-@font-face {
-    font-family: 'Just Me Again Down Here';
-    src: url('path/to/JustMeAgainDownHere-Regular.ttf') format('truetype');
-    font-weight: bold;
-    font-style: bold;
-}
-
-/* Apply the font to the 'MessageText' element */
-.MessageText {
-    height: 100%;
-    width: 100%;
-    font-family: 'Just Me Again Down Here', sans-serif;
-    font-size: 35px;
-    color: #333;
-    position: absolute;
-    left: 31vw;
-    top: 6vh;
-}
-
-.ArrowImage {
-    position: absolute;
-    top: 6vh;
-    ;
-    /* Adjust the top position as needed */
-    left: 25vw;
-    /* Adjust the left position to align with the text */
-    width: 100px;
-    /* Adjust the width of the arrow image */
-    height: auto;
-    /* Maintain aspect ratio */
+.ContactIcons a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
 /*------------------------------------------------------------------------------------*/
-/* For a smaller screen size */
-
-/* Media query for smaller screen sizes (adjust as needed) */
-@media (max-width: 600px) {
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
     .Logo {
         font-size: 170vw;
-        /* Adjust font size */
         left: 55%;
-        /* Re-place for smaller viewports */
         top: 50%;
     }
 
-    .HelloEverybody,
-    .MyNameIsBuka,
-    .IAmA {
-        left: 50vw;
-        font-size: 25px;
-    }
-
-    .Title1,
-    .Title2 {
-        font-size: 15px;
-    }
-
-    .Body1,
-    .Body2 {
-        font-size: 10px;
-    }
-
-    .image-1 img,
-    .image-2 img {
-        opacity: 1;
-    }
-
-    .ProjectHighlights {
-        width: 100%;
-        /* Full width for smaller screens */
-        padding: 15px;
-        /* Reduced padding for smaller screens */
-        font-size: 1.2rem;
-        /* Smaller font size for better readability */
-        position: relative;
-        /* Ensure relative positioning */
-        top: 0;
-        /* Place it at the top of the screen */
-        margin-top: 0;
-        /* Remove any top margin */
-    }
-
     .Projects {
-        height: auto;
-        /* Remove fixed height */
-        margin-top: 120px;
-        /* Add space below ProjectHighlights */
+        padding: 30px 10px;
     }
 
-    .ProjectTitle {
-        font-size: 40px;
-        /* Reduce font size */
-        margin-top: 30px;
-        /* Adjust margin */
+    #project {
+        grid-template-columns: 1fr;
     }
 
-    .ProjectHighlights {
-        transform: rotate(0deg);
-        font-size: 50px;
-        /* Reduce font size */
-        left: 5%;
-        margin-top: -20px;
+    .Contact {
+        padding: 30px 10px;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr 1fr;
-        /* Keep two columns */
-        margin-left: 10vw;
-        /* Adjust the left margin */
-        padding-top: 5vw;
-        /* Adjust top padding */
+    #introduction {
+        height: auto; /* Let the height adjust automatically on small screens */
+        padding-top: 20px; /* Reduce padding for smaller screens */
+        font-size: 20px; /* Adjust font size for smaller screens */
+        padding: 40px;
     }
+}
 
-    .project {
-        width: 40vw;
-        /* Adjust width */
-        height: 40vw;
-        /* Adjust height */
-    }
+@media (max-width: 480px) {
 
-    .arrow {
-        opacity: 0;
-    }
-
-    .EmailTitle {
-        font-size: 20px;
-    }
-
-    .EmailContent {
-        font-size: 25px;
-    }
-
-    .MessageText {
-        font-size: 20px;
-    }
-
-    .ContactIcons {
-        
+    .Logo {
+        font-size: 190vw;
+        left: 50%;
+        top: 50%;
     }
 }
