@@ -33,3 +33,24 @@ tabs.forEach(tab => {
   });
 });
 
+
+// Get all the toggle buttons
+const toggleButtons = document.querySelectorAll('.toggle-button');
+
+// Loop through each button and add event listener
+toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Get the associated toggle content (instructions list)
+        const content = this.nextElementSibling;
+
+        // Toggle the "open" class to show/hide the content
+        content.classList.toggle('open');
+
+        // Optionally, you could change the button text on toggle
+        if (content.classList.contains('open')) {
+            this.textContent = 'Hide Instructions';
+        } else {
+            this.textContent = 'Show Instructions';
+        }
+    });
+});
