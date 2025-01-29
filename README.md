@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+Visit https://be2143.github.io/portfolio/ to view the portfolio.
+
 This project showcases my personal portfolio, hosting the projects I completed in the fall of 2023. The webpage consists of four main sections: the landing page, an about me section, project highlights, and contact information. Each section has interactive elements. As users scroll, the navigation bar remains visible, enhancing the site's navigability.
 
 To begin, the website opens with a simple landing page featuring a prominent "b" logo, representing my name's initial. A moving arrow at the bottom left prompts users to scroll down for more content. Clicking my name in the navigation bar takes users back to this section.
