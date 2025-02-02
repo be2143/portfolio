@@ -187,10 +187,13 @@ h1 {
 }
 
 .highlight-link {
-    font-weight: bold;
+    color: grey;
+    text-decoration: underline;
+    transition: font-weight 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .highlight-link:hover {
+    font-weight: semi-bold;
     background-color: yellow;
 }
 
