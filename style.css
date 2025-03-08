@@ -33,6 +33,10 @@ h1 {
     font-size: 40px;
 }
 
+::selection {
+    background-color: yellow;
+}
+
 /*------------------------------------------------------------------------------------*/
 /* Landing Page Section */
 .LandingPage {
@@ -96,6 +100,7 @@ h1 {
     transform: scale(1.3);
     color: black;
     text-decoration: underline;
+    background-color: yellow;
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -122,6 +127,20 @@ h1 {
     max-width: auto;
     height: 35px;
     border-radius: 40%;
+}
+
+.wave {
+    display: inline-block;
+    animation: wave-animation 1.5s infinite;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(0deg); }
+    60% { transform: rotate(20deg); }
+    80% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
 }
 
 /*------------------------------------------------------------------------------------*/

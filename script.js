@@ -33,6 +33,18 @@ tabs.forEach(tab => {
   });
 });
 
+// Wave effect for the emoji in the introduction
+const emoji = document.querySelector(".wave");
+
+        function waveEffect() {
+            emoji.style.transform = "rotate(20deg)";
+            setTimeout(() => {
+                emoji.style.transform = "rotate(0deg)";
+            }, 200);
+        }
+
+        setInterval(waveEffect, 400);
+
 
 // Get all the toggle buttons
 const toggleButtons = document.querySelectorAll('.toggle-button');
