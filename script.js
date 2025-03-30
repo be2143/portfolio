@@ -66,3 +66,14 @@ toggleButtons.forEach(button => {
         }
     });
 });
+
+// Toggle menu on click
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navBar = document.querySelector(".NavigationBar");
+
+    menuToggle.addEventListener("click", function () {
+        menuToggle.classList.toggle("open");
+        navBar.classList.toggle("open");
+    });
+});
