@@ -380,6 +380,12 @@ h1 {
 
 /* Animated menu */
 @media (max-width: 768px) {
+    .Name {
+        position: static; /* This makes it flow normally with the document */
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
     .NavigationBar {
         display: flex;
         flex-direction: column;
@@ -404,9 +410,18 @@ h1 {
         transition: background 0.3s ease;
     }
 
+    .NavigationBar a:focus {
+        text-decoration: underline;
+    }
+
     .NavigationBar a:hover {
         background: rgba(255, 255, 255, 0.2);
     }
+
+    /* Change text color and background when the menu is open */
+.menu-toggle.open + .NavigationBar a {
+    color: white;
+}
 
     /* Show menu when active */
     .NavigationBar.open {
