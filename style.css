@@ -327,6 +327,11 @@ h1 {
         /* Adjust font size for smaller screens */
         padding: 40px;
     }
+    
+        .Creativity iframe {
+            width: 90%; /* Adjust width for smaller screens */
+        }
+
 }
 
 @media (max-width: 480px) {
@@ -344,8 +349,8 @@ h1 {
     flex-direction: column;
     cursor: pointer;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 50px;
+    right: 20px;
     z-index: 1000;
     padding: 10px;
     background: rgba(255, 255, 255, 0.8);
@@ -355,22 +360,22 @@ h1 {
 
 .menu-toggle .bar {
     background: black;
-    height: 4px;
-    width: 30px;
-    margin: 5px 0;
+    height: 2px;
+    width: 15px;
+    margin: 2px 0;
     border-radius: 2px;
     transition: transform 0.3s, opacity 0.3s;
 }
 
 /* Transform bars into an 'X' when menu is open */
 .menu-toggle.open .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
 }
 .menu-toggle.open .bar:nth-child(2) {
     opacity: 0;
 }
 .menu-toggle.open .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Animated menu */
