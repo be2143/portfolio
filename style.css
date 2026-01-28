@@ -17,7 +17,6 @@ body {
     font-family: 'PT Serif', sans-serif;
     color: #333;
     line-height: 1.6;
-    background: linear-gradient(to bottom left, #FFFFFF 0%, #FFF5F0 20%, #FFE8D6 40%, #FFD9C0 60%, #FFC9A8 80%, #D4A574 100%);
     min-height: 100vh;
 }
 
