@@ -151,6 +151,14 @@ h1 {
     text-align: center;
 }
 
+.project-subtitle {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+
 .project {
     display: flex;
     flex-direction: column;
@@ -175,6 +183,16 @@ h1 {
     margin: 0 auto;
     align-items: stretch;
     /* Stretch cards to equal height */
+}
+
+.single-project-list {
+    display: flex;
+    justify-content: center;
+}
+
+.single-project-list .project {
+    max-width: 420px;
+    width: 100%;
 }
 
 .project:hover {
