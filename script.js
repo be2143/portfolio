@@ -1,79 +1,62 @@
-// Smooth scrolling for the navigation bar
-$(document).ready(function () {
-    // Smooth scrolling for anchor links
-    $('.NavigationBar a').on('click', function (e) {
+document.querySelectorAll('.site-nav a[href^="#"]').forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    var id = this.getAttribute('href');
+    if (id && id.length > 1) {
+      var target = document.querySelector(id);
+      if (target) {
         e.preventDefault();
-        var target = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top
-        }, 800);
-    });
-});
-
-// Smooth scrolling to the landing page bar
-$('.Name').on('click', function () {
-    $('html, body').animate({
-        scrollTop: $('.LandingPage').offset().top
-    }, 'slow');
-});
-
-const tabs = document.querySelectorAll('.option');
-const contentTexts = document.querySelectorAll('.text');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    // Remove 'active' from all tabs and content
-    tabs.forEach(t => t.classList.remove('active'));
-    contentTexts.forEach(c => c.classList.remove('active'));
-
-    // Add 'active' to the clicked tab and corresponding content
-    tab.classList.add('active');
-    const activeTab = tab.getAttribute('data-tab');
-    document.querySelector(`.text.${activeTab}`).classList.add('active');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   });
 });
 
-// Wave effect for the emoji in the introduction
-const emoji = document.querySelector(".wave");
+// Selected work: hover/focus swaps active preview image + updates tech caption.
+(function () {
+  var showcase = document.querySelector('.projects-showcase');
+  if (!showcase) return;
 
-        function waveEffect() {
-            emoji.style.transform = "rotate(20deg)";
-            setTimeout(() => {
-                emoji.style.transform = "rotate(0deg)";
-            }, 200);
-        }
+  var links = showcase.querySelectorAll('.projects-links li[data-preview]');
+  var caption = document.getElementById('preview-caption');
+  var description = document.getElementById('preview-description');
 
-        setInterval(waveEffect, 400);
+  function setActive(li) {
+    var id = li.getAttribute('data-preview');
+    var tech = li.getAttribute('data-tech') || '';
+    var desc = li.getAttribute('data-desc') || '';
+    if (id == null) return;
 
-
-// Get all the toggle buttons
-const toggleButtons = document.querySelectorAll('.toggle-button');
-
-// Loop through each button and add event listener
-toggleButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        // Get the associated toggle content (instructions list)
-        const content = this.nextElementSibling;
-
-        // Toggle the "open" class to show/hide the content
-        content.classList.toggle('open');
-
-        // Optionally, you could change the button text on toggle
-        if (content.classList.contains('open')) {
-            this.textContent = 'Hide Instructions';
-        } else {
-            this.textContent = 'Show Instructions';
-        }
+    showcase.classList.add('is-interacting');
+    links.forEach(function (other) {
+      other.classList.toggle('is-hovered', other === li);
     });
-});
+    showcase.setAttribute('data-active-preview', id);
 
-// Toggle menu on click
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navBar = document.querySelector(".NavigationBar");
+    if (caption) caption.textContent = tech;
+    if (description) description.textContent = desc;
+  }
 
-    menuToggle.addEventListener("click", function () {
-        menuToggle.classList.toggle("open");
-        navBar.classList.toggle("open");
+  function clearHover() {
+    showcase.classList.remove('is-interacting');
+    links.forEach(function (li) {
+      li.classList.remove('is-hovered');
     });
-});
+
+    // Reset to first item
+    showcase.setAttribute('data-active-preview', '0');
+    var first = showcase.querySelector('.projects-links li[data-preview="0"]');
+    if (caption && first) caption.textContent = first.getAttribute('data-tech') || '';
+    if (description && first) description.textContent = first.getAttribute('data-desc') || '';
+  }
+
+  links.forEach(function (li) {
+    li.addEventListener('mouseenter', function () {
+      setActive(li);
+    });
+    li.addEventListener('focusin', function () {
+      setActive(li);
+    });
+  });
+
+  showcase.addEventListener('mouseleave', clearHover);
+})();

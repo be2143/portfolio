@@ -4,252 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Buka Enkhjargal - A curious programmer, design enthusiast, and lifelong learner actively seeking opportunities in computer science and interactive media.">
+    <meta name="description" content="Buka Enkhjargal — developer and interactive media student.">
     <meta name="author" content="Buka Enkhjargal">
-    <title>Buka Portfolio</title>
+    <title>Buka Enkhjargal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="script.js"></script>
 </head>
 
 <body>
-    <!-- Landing Page Section -->
-    <header class="LandingPage" role="banner">
-        <div class="Logo" aria-label="Logo">.b</div>
-        <h1 class="Name" id="top">BUKA ENKHJARGAL</h1>
-        <!-- NavigationBar Section -->
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="NavigationBar">
-            <div class="nav-group">
-                <a href="#introduction">ABOUT</a>
-            </div>
-            <div class="nav-group">
-                <a href="#projects">PROJECT HIGHLIGHTS</a>
-            </div>
-            <div class="nav-group">
-                <a href="#contact">CONTACT</a>
-            </div>
-        </div>
+    <header class="site-header" role="banner">
+        <a href="#" class="site-logo" aria-label="Buka Enkhjargal">
+            <span class="logo-normal">Buka Enkhjargal</span>
+            <span class="logo-alt" aria-hidden="true">Буянхишиг Энхжаргал</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="https://github.com/be2143" target="_blank" rel="noopener">Github</a>
+        </nav>
     </header>
 
     <main>
-        <!-- Introduction Section -->
-        <section id="introduction" class="Introduction">
-            <!-- <h1>Hi, I’m <img src="images/ME.png" alt="My image"> Buka!</h1> -->
-            <h1>Hi, I’m <span class="wave">👋</span> Buka!</h1>
-            <p>I’m a Computer Science and Interactive Media Student at New York University Abu Dhabi.</p>
-            <p></p>
-            <p>My mission? Keep things fresh and fun! Whether I'm coding up a storm or dreaming up the next big thing,
-                I'm all about bringing a bit of flair and creativity to everything I do.</p>
-            <p></p>
-            <a href="" target="_blank" class="highlight-link">View my resume
-                here</a>
+        <section id="about" class="intro">
+            <p class="intro-text">
+                Buka Enkhjargal is a <em>developer</em> and <em>interactive media</em> student soon graduating from
+                NYU Abu Dhabi, with prior experience at ByteDance. Her work spans <em>full-stack web applications</em>,
+                creative tooling, and experiments where code meets learning and accessibility. She is interested in roles
+                where thoughtful engineering supports clear, humane product experiences.
+            </p>
         </section>
 
-        <!-- Project Highlights Section -->
-        <section id="projects" class="Projects" aria-labelledby="projects-title">
-            <h1 id="projects-title">Project Highlights</h1>
+        <hr class="divider" aria-hidden="true">
 
-            <!-- Full-Stack & AI Web Apps -->
-            <h2 class="project-subtitle">Full-Stack & AI Web Apps</h2>
-            <div class="project-list">
-                <article class="project">
-                    <a href="https://github.com/SMART-Lab-NYU/Voxy-Buka" target="_blank" aria-label="social-stories">
-                        <img src="images/social-stories.png" alt="Screenshot of social-stories" id="social-stories-imag">
-                    </a>
-                    <p class="project-title">Create Social Stories with AI</p>
-                    <p class="project-description">Next.js, MongoDB, Redis, Cloudinary, OpenAI, AWS, Gemini APIs</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/aruzhan-bolatova/Slush-D-Hack" target="_blank" aria-label="voxy">
-                        <img src="images/voxy.png" alt="Screenshot of voxy" id="Hackathon--Image">
-                    </a>
-                    <p class="project-title">Voxy - AI powered AAC tool for children with speech impairment</p>
-                    <p class="project-description">Next.js, MongoDB, Tailwind CSS, OpenAI, ElevenLabs</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/soniccircle" target="_blank" aria-label="sonic">
-                        <img src="images/sonic.png" alt="Screenshot of sonic" id="Fall24-Project1-Image">
-                    </a>
-                    <p class="project-title">Sonic Circle: A platform for music discovery and sharing</p>
-                    <p class="project-description">Node.js/Express, MongoDB, Tailwind CSS, Passport.js, YouTube Embed API</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/ReVibe" target="_blank" aria-label="revibe">
-                        <img src="images/soon.png" alt="Screenshot of ui test" id="ui-test-Image">
-                    </a>
-                    <p class="project-title">ReVibe - Campus Marketplace System</p>
-                    <p class="project-description">Python, Flask, MySQL, HTML, Tailwind CSS</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/deriv-ai-hackathon" target="_blank" aria-label="revibe">
-                        <img src="images/UI-test.png" alt="Screenshot of ui test" id="ui-test-Image">
-                    </a>
-                    <p class="project-title">UI Test Pipeline for AI-Powered Web Applications</p>
-                    <p class="project-description">Python, Flask, Selenium, LangChain, OpenAI & Google Gemini APIs, Docker</p>
-                </article>
-            </div>
-
-            <!-- Frontend Web Experiences (HTML, CSS, JavaScript) -->
-            <h2 class="project-subtitle">Frontend Web Experiences (HTML, CSS, JavaScript)</h2>
-            <div class="project-list">
-                <article class="project">
-                    <a href="https://chinese-language-learning-ruby.vercel.app/?fbclid=PAVERFWAP_9eVleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaecQfBdTXZML86u-7jv2FK8Jmj1v3qjZf3hJPLPGRCNdqRZff5B3dl8Pn8Mag_aem_gRRcPgpYSPNYAyLF7eldZA" target="_blank" aria-label="revibe">
-                        <img src="images/chinese-learning.png" alt="Screenshot of chinese elementary 1" id="chinese-elementary-1-Image">
-                    </a>
-                    <p class="project-title">Chinese Elementary 1 - Character Learning App</p>
-                    <p class="project-description">Web app deployed on Vercel using HTML, CSS, and JavaScript</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/cursor-hackathon" target="_blank" aria-label="revibe">
-                        <img src="images/try-on.png" alt="Screenshot of try on" id="try-on-Image">
-                    </a>
-                    <p class="project-title">Try On App for Clothing Brands</p>
-                    <p class="project-description">Hackathon prototype virtual try-on experience built with HTML, CSS, and JavaScript</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://be2143.github.io/Photo-Booth/index.html" target="_blank" aria-label="Photo-Booth">
-                        <img src="images/photobooth.png" alt="Screenshot of photobooth" id="Photobooth-Image">
-                    </a>
-                    <p class="project-title">Interactive Photo-Booth with NCT Dream Album Themes</p>
-                    <p class="project-description">HTML/CSS, JavaScript</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://qmnaushad.github.io/finorfatecomic/" target="_blank" aria-label="Comics Project">
-                        <img src="images/2.png" alt="Screenshot of Comics Project" id="Fall23-Project2-Image">
-                    </a>
-                    <p class="project-title">Interactive web comic</p>
-                    <p class="project-description"> HTML/CSS, JavaScript, and Procreate</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://fhgggtyf.github.io/HOW-Video/index.html" target="_blank"
-                        aria-label="Video Project">
-                        <img src="images/4.png" alt="Screenshot of Video Project" id="Fall23-Project4-Image">
-                    </a>
-                    <p class="project-title">Interactive video webpage</p>
-                    <p class="project-description">HTML, CSS, JavaScript</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/fangfausto/sound-project-podcast" target="_blank"
-                        aria-label="Sound Project">
-                        <img src="images/3.png" alt="Screenshot of Sound Project" id="Fall23-Project3-Image">
-                    </a>
-                    <p class="project-title">A webpage for hosting a podcast</p>
-                    <p class="project-description">HTML, CSS, JavaScript</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/starter-pack" target="_blank"
-                        aria-label="Fresh Pack">
-                        <img src="images/1.png" alt="Screenshot of Fresh Pack project" id="Project1-Image">
-                    </a>
-                    <p class="project-title">All-in-one webpage for incoming freshmen to NYU Abu Dhabi</p>
-                    <p class="project-description">HTML, CSS, JavaScript</p>
-                </article>
-            </div>
-
-            <!-- Games -->
-            <h2 class="project-subtitle">Games (Unity, Python/Processing)</h2>
-            <div class="project-list">
-                <article class="project">
-                    <a href="https://be2143.github.io/racing-game/" target="_blank" aria-label="Racing-Game">
-                        <img src="images/racing.png" alt="Screenshot of racing game" id="Racing-Game-Image">
-                    </a>
-                    <p class="project-title">Car Racing Game built on Unity</p>
-                    <p class="project-description">C#, Unity</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/Rythm-Game?tab=readme-ov-file" target="_blank" aria-label="revibe">
-                        <img src="images/fall-game.png" alt="Screenshot of revibe" id="Revibe-Image">
-                    </a>
-                    <p class="project-title">Fall-In-Line Rythm Game</p>
-                    <p class="project-description">C#, Unity (WebGL build)</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/FPS-Game" target="_blank" aria-label="Shooting-Game">
-                        <img src="images/fps.png" alt="Screenshot of shooting game" id="Shooting-Game-Image">
-                    </a>
-                    <p class="project-title">Shooting Game built on Unity</p>
-                    <p class="project-description">C#, Unity</p>
-                </article>
-
-                <article class="project">
-                    <a href="https://github.com/be2143/Fireboy-and-Watergirl" target="_blank" aria-label="Game">
-                        <img src="images/game.png" alt="Screenshot of game" id="Spring23-Project1-Image">
-                    </a>
-                    <p class="project-title">A digital game, Fireboy and Watergirl</p>
-                    <p class="project-description">Python, Processing, Object Oriented Programming</p>
-                </article>
-            </div>
-
-            <!-- UI/UX & Design Prototypes -->
-            <h2 class="project-subtitle">UI/UX & Design Prototypes</h2>
-            <div class="project-list single-project-list">
-                <article class="project">
-                    <a href="files/SAM.pdf" target="_blank" aria-label="SAM">
-                        <img src="images/sam.png" alt="Screenshot of SAM" id="Winter23-Project1-Image">
-                    </a>
-                    <p class="project-title">SAM: UI/UX project for a Mentor-Mentee matching app</p>
-                    <p class="project-description">See <a
-                            href="https://www.figma.com/proto/aXlxbzr9fxTna236aGG3mF/Final-Project?node-id=256-1058&scaling=scale-down&page-id=0%3A1&starting-point-node-id=256%3A1058&show-proto-sidebar=1"
-                            target="_blank" class="highlight-link">Figma prototype</a> here.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Creative Coding Section -->
-        <section id="creativity" class="Creativity" aria-labelledby="creativity-title">
-            <h1 id="creativity-title">Creative Coding with p5.js</h1>
-            <div class="creativity-container">
-                <!-- The first iframe project -->
-                <div class="creativity-item">
-                    <iframe src="https://editor.p5js.org/be2143/full/wxUp4YLBf" width="700" height="745"></iframe>
+        <section id="projects" class="projects-showcase" aria-labelledby="projects-heading" data-active-preview="0">
+            <div class="projects-inner">
+                <div class="projects-sidebar">
+                    <h2 id="projects-heading" class="grid-label">Selected work</h2>
+                    <ul class="projects-links">
+                        <li data-preview="0" data-tech="Next.js · MongoDB · Redis · Cloudinary · OpenAI · AWS · Gemini, OpenAI APIs" data-desc="Behavioral intervention tool for special education practitioners, using AI to generate and personalize social stories.">
+                            <a href="https://github.com/SMART-Lab-NYU/Voxy-Buka" target="_blank" rel="noopener">AdaptED Stories</a>
+                        </li>
+                        <li data-preview="1" data-tech="Next.js · MongoDB · Tailwind CSS · OpenAI · ElevenLabs" data-desc="An AAC tool for minimally verbal children.">
+                            <a href="https://github.com/aruzhan-bolatova/Slush-D-Hack" target="_blank" rel="noopener">Voxy AAC</a>
+                        </li>
+                        <li data-preview="2" data-tech="Python · Flask · Selenium · LangChain · OpenAI & Google Gemini APIs · Docker" data-desc="A UI test automation pipeline for AI-powered web applications to keep experiences reliable.">
+                            <a href="https://github.com/be2143/deriv-ai-hackathon" target="_blank" rel="noopener">UI Test Automation Pipeline</a>
+                        </li>
+                        <li data-preview="3" data-tech="React · Curson · Gemini APIs" data-desc="A virtual try-on prototype that helps users preview clothing looks before buying.">
+                            <a href="https://github.com/be2143/cursor-hackathon" target="_blank" rel="noopener">LookLab - Try On App for Clothing Brands</a>
+                        </li>
+                        <li data-preview="4" data-tech="HTML · CSS · JavaScript · Procreate" data-desc="An interactive web comic with story-driven navigation and character-focused scenes.">
+                            <a href="https://qmnaushad.github.io/finorfatecomic/" target="_blank" rel="noopener">Fin or Fate (Interactive web comic)</a>
+                        </li>
+                        <li data-preview="5" data-tech="C# · Unity" data-desc="A Unity car racing game featuring driving controls and track-based gameplay.">
+                            <a href="https://be2143.github.io/racing-game/" target="_blank" rel="noopener">Car Racing Game</a>
+                        </li>
+                        <li data-preview="6" data-tech="C# · Unity" data-desc="A Unity shooting game built around aiming, targets, and responsive gameplay loops.">
+                            <a href="https://github.com/be2143/FPS-Game" target="_blank" rel="noopener">Shooting Game</a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- The next two iframe projects in grid format -->
-                <div class="creativity-grid">
-                    <div class="creativity-item">
-                        <iframe src="https://editor.p5js.org/be2143/full/-F-EQhVzD" width="400" height="445"></iframe>
+                <div class="projects-preview-wrap">
+                    <div class="preview-stack" aria-hidden="true">
+                        <img class="preview-img preview-img--left" data-preview="0" src="images/adapted-stories.png" alt="">
+                        <img class="preview-img preview-img--left" data-preview="1" src="images/voxy.png" alt="">
+                        <img class="preview-img preview-img--left" data-preview="2" src="images/UI-test.png" alt="">
+                        <img class="preview-img preview-img--left" data-preview="3" src="images/try-on.png" alt="">
+                        <img class="preview-img preview-img--left" data-preview="4" src="images/2.png" alt="">
+                        <img class="preview-img preview-img--left" data-preview="5" src="images/racing.png" alt="">
+                        <img class="preview-img preview-img--left" data-preview="6" src="images/fps.png" alt="">
                     </div>
-                    <div class="creativity-item">
-                        <iframe src="https://editor.p5js.org/be2143/full/G8wv6ZLNY" width="400" height="445"></iframe>
-                    </div>
+                    <p class="preview-caption" id="preview-caption" aria-live="polite">
+                        Next.js · MongoDB · Redis · Cloudinary · OpenAI · AWS · Gemini APIs
+                    </p>
+                    <p class="preview-description" id="preview-description" aria-live="polite">
+                        Generate accessible social stories for everyday moments using AI.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="Contact" aria-labelledby="contact-title">
-            <h2 id="contact-title">Let's Connect</h2>
-            <div class="Email">
-                <a href="mailto:be2143@nyu.edu" class="EmailContent" id="emailContent">BE2143@NYU.EDU</a>
+        <hr class="divider divider--section" aria-hidden="true">
+
+        <section id="info" class="details-grid" aria-label="Experience, education, skills, and contact">
+            <div class="grid-col grid-col-image">
+                <div class="portrait">
+                    <img src="images/ME.png" alt="Portrait of Buka Enkhjargal" width="480" height="600" loading="lazy">
+                </div>
             </div>
-            <!-- Contact icons -->
-            <div class="ContactIcons" aria-label="Social Media Links">
-                <a href="https://www.linkedin.com/in/buka-e/" target="_blank" aria-label="LinkedIn">
-                    <img src="images/linkedin.png" alt="LinkedIn logo">
-                </a>
-                <a href="https://github.com/be2143" target="_blank" aria-label="GitHub">
-                    <img src="images/github.png" alt="GitHub logo">
-                </a>
-                <a href="https://instagram.com/buka3018/" target="_blank" aria-label="Instagram">
-                    <img src="images/instagram.png" alt="Instagram logo">
-                </a>
+
+            <div class="grid-col">
+                <h2 class="grid-label">Education</h2>
+                <ul class="grid-list">
+                    <li>
+                        <span class="item-org">New York University Abu Dhabi</span>
+                        <span class="item-role"><em>B.S., Computer Science &amp; Interactive Media</em></span>
+                        <span class="item-date">Graduating</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="grid-col">
+                <h2 class="grid-label">Experience</h2>
+                <ul class="grid-list">
+                    <li>
+                        <span class="item-org">ByteDance</span>
+                        <span class="item-role"><em>Software Engineering</em></span>
+                        <span class="item-date">Previous role</span>
+                    </li>
+                    <li>
+                        <span class="item-org">Research Assistant</span>
+                        <span class="item-role"><em>HCI & Agentic AI, Dataset Contruction</em></span>
+                        <span class="item-date">Ongoing</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="grid-col">
+                <h2 class="grid-label">Skills</h2>
+                <ul class="grid-list grid-list-plain">
+                    <span class="item-role">JavaScript, TypeScript</>
+                    <span class="item-role">Python</>
+                    <span class="item-role">React, Next.js, Node.js</>
+                    <span class="item-role">HTML, CSS, Tailwind</>
+                    <span class="item-role">Unity, C#</>
+                    <span class="item-role">Java, Spring Boot</>
+                    <span class="item-role">SQL, MongoDB</>
+                    <span class="item-role">Git, Figma</>
+                </ul>
+            </div>
+
+            <div class="grid-col">
+                <h2 class="grid-label">Contact</h2>
+                <div class="contact-group">
+                    <h3 class="contact-label">Email</h3>
+                    <p><a href="mailto:be2143@nyu.edu" class="link-text">be2143@nyu.edu</a></p>
+                </div>
+                <div class="contact-group">
+                    <h3 class="contact-label">Elsewhere</h3>
+                    <p><a href="https://www.linkedin.com/in/buka-e/" class="link-text" target="_blank" rel="noopener">LinkedIn</a></p>
+                    <p><a href="https://github.com/be2143" class="link-text" target="_blank" rel="noopener">GitHub</a></p>
+                    <p><a href="https://instagram.com/buka3018/" class="link-text" target="_blank" rel="noopener">Instagram</a></p>
+                </div>
             </div>
         </section>
     </main>
